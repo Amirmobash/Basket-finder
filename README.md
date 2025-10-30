@@ -4,7 +4,7 @@
 ├─ requirements.txt
 ├─ presence_by_name.py
 ├─ tools/
-│  ├─ esp32_advertiser_itag.ino
+│ 
 │  └─ win_ble_fix.ps1
 ├─ scripts/
 │  └─ run_unix.sh
@@ -27,10 +27,6 @@ Basket finder Radar is a Python desktop app that **passively scans BLE advertise
 - Smooth chart with a 3-minute window and a mini path indicator.
 - CSV logging enabled (`ble_events.csv`).
 
-> BLE advertiser expected name contains **"ITAG"** (case-insensitive). An ESP32 can broadcast this (see `tools/esp32_advertiser_itag.ino`).
-
----
-
 ## Features
 
 - **Passive BLE scanning** via `bleak` (no GATT connection / no pairing).
@@ -46,7 +42,6 @@ Basket finder Radar is a Python desktop app that **passively scans BLE advertise
   - Windows 10/11 (Bluetooth adapter, `winsound` available)
   - Linux/macOS (Bluetooth adapter; `tkinter` and BlueZ on Linux; sound beeps may be skipped)
 - Hardware:
-  - BLE tag (e.g., **ESP32** advertising the name `ITAG`).
 
 ----Amir Mobasheraghdam
 
@@ -124,11 +119,11 @@ NAME_TARGETS = {"ITAG": "Basket-1"} # match by substring (case-insensitive)
 
 ---
 
-## ESP32 Advertiser (optional)
+## Bacon Advertiser (optional)
 
-Flash this to an ESP32 to broadcast a BLE name **"ITAG"** continuously.
+Flash this to an beacon to broadcast a BLE name **"ITAG"** continuously.
 
-See `tools/esp32_advertiser_itag.ino`. Summary:
+See `tools/beacon_advertiser_itag.ino`. Summary:
 
 ```cpp
 #include <BLEDevice.h>
@@ -163,7 +158,7 @@ By default logs to `ble_events.csv`:
 ```
 presence_by_name.py        # main app (UI + BLE scan + logic)
 requirements.txt           # Python dependencies
-tools/esp32_advertiser_itag.ino
+tools/beacon_advertiser_itag.ino
 
 ```
 
@@ -249,7 +244,7 @@ python presence_by_name.py
 
 ---
 
-## tools/esp32_advertiser_itag.ino
+## tools/beacon_advertiser_itag.ino
 
 ```cpp
 #include <BLEDevice.h>
