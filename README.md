@@ -1,22 +1,3 @@
-# Basket-finder
-
-├─ README.md
-├─ requirements.txt
-├─ presence_by_name.py
-├─ tools/
-│ 
-│  └─ win_ble_fix.ps1
-├─ scripts/
-│  └─ run_unix.sh
-└─ .gitignore
-```
-
-
----
-
-## README.md (copy-paste)
-
-````markdown
 # Basket finder Radar — BLE Presence & Distance Dashboard (Zimmer A)
 
 Basket finder Radar is a Python desktop app that **passively scans BLE advertisements** (no pairing) and presents a live, industrial **orange-themed** UI for **presence detection** in *Room A* based on **distance (meters)** estimated from RSSI.
@@ -298,7 +279,4 @@ ble_events.csv
 ```bash
 git init
 git add .
-git commit -m "Initial: Basket finder Radar (BLE presence, Room A, orange UI)"
-
-
-If you want, I can also generate a short **MIT LICENSE** file and a **GitHub Actions workflow** later (e.g., to run flake8/black).
+git commit -m "Initial: Basket finder Radar (BLE presence, Room A, orange UI)
