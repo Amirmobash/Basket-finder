@@ -274,8 +274,7 @@ class PresenceApp(tk.Tk):
     def _update_device(self, timestamp: float, friendly: str, rssi: int):
         """Update device state with new scan data, check presence changes."""
         if friendly not in self.devices:
-            self.devices[friendly] = DeviceState(friendly_name=friendly)
-
+            
         dev = self.devices[friendly]
         raw_dist = distance_from_rssi(rssi)
         smoothed = exponential_smooth(raw_dist, dev.smoothed_distance)
