@@ -15,7 +15,6 @@ import datetime
 import os
 import queue
 import sys
-import threading
 import time
 from collections import deque
 from dataclasses import dataclass, field
