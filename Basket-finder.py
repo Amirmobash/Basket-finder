@@ -4,15 +4,7 @@ departure events to CSV.
 """
 
 import asyncio
-import csv
-import datetime
-import os
-import queue
-import sys
-import time
-from collections import deque
-from dataclasses import dataclass, field
-from typing import Dict, Optional, Tuple
+
 
 # Third‑party
 import bleak
