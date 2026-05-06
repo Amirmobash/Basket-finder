@@ -16,14 +16,7 @@ from tkinter import scrolledtext
 
 # Platform‑specific
 if sys.platform == "win32":
-    import winsound
-
-
-# ----------------------------------------------------------------------
-# Configuration (adjust as needed)
-# ----------------------------------------------------------------------
-SCAN_WINDOW_SEC = 5.0                # Duration of each BLE scan
-SCAN_INTERVAL_SEC = 5.0              # Wait between scans (non‑overlapping)
+    import winsound          # Wait between scans (non‑overlapping)
 ROOM_A_METER_RANGE = (1.0, 5.0)       # Inside if distance in this interval
 HYSTERESIS_MARGIN = 0.5               # Meters added to range for state change
 DEBOUNCE_COUNT = 2                    # Require N consecutive same state
