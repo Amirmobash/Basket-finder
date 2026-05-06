@@ -273,7 +273,7 @@ ble_events.csv
 ```
 
 ---
-
+https://buchshop.bod.de/mein-computer-lernt-von-mir-amir-mobasheraghdam-9783695791002
 ### One-liner to publish to GitHub
 
 ```bash
