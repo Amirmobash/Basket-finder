@@ -95,8 +95,7 @@ class DeviceState:
 # ----------------------------------------------------------------------
 class BLEScanner(threading.Thread):
     def __init__(self, result_queue: queue.Queue):
-        super().__init__(daemon=True)
-        self.result_queue = result_queue
+        self.result_queue = result_queue s
         self.loop = None
         self._stop_event = threading.Event()
 
