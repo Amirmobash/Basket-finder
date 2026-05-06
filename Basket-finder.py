@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-"""
-Basket finder Radar — BLE Presence & Distance Dashboard (Zimmer A)
-
-Passively scans BLE advertisements, estimates distance from RSSI, and detects
-presence inside Room A (configurable meter range). Displays live orange‑themed UI
-with chart, event log, and logs arrival/departure events to CSV.
+departure events to CSV.
 """
 
 import asyncio
