@@ -176,6 +176,14 @@ def target_state_for_distance(
         )
 
     return low <= distance_m <= high
+self.distance_label = tk.Label(
+            top_frame,
+            text="Distanz: — m",
+            font=("Helvetica", 14),
+            fg=fg,
+            bg=bg,
+        )
+        self.distance_label.pack(side=tk.LEFT, padx=20)
 
 
 class BLEScannerThread(threading.Thread):
@@ -299,7 +307,14 @@ class PresenceApp(tk.Tk):
     def _schedule(self, delay_ms: int, callback) -> None:
         if self._closing:
             return
-
+rssi = int(adv_data.rssi)
+                    result = ScanResult(
+                        timestamp=now,
+                        address=address,
+                        friendly_name=friendly,
+                        advertised_name=local_name,
+                        rssi=rssi,
+                    )
         after_id: Optional[str] = None
 
         def wrapped() -> None:
@@ -843,6 +858,14 @@ def main() -> int:
     except ValueError as exc:
         LOGGER.error("Invalid configuration: %s", exc)
         return 2
+self.distance_label = tk.Label(
+            top_frame,
+            text="Distanz: — m",
+            font=("Helvetica", 14),
+            fg=fg,
+            bg=bg,
+        )
+        self.distance_label.pack(side=tk.LEFT, padx=20)
 
     try:
         app = PresenceApp(config)
