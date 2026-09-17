@@ -2,18 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-BLE presence/range monitor with Tkinter UI.
-
-This application scans for configured BLE advertising names, estimates distance
-from RSSI, applies smoothing + hysteresis + debounce, logs enter/leave events to
-CSV, and displays a short history chart.
-
-Important:
-    RSSI-based distance is only an approximation. It is strongly affected by
-    antenna orientation, walls, people, reflections, interference, and device
-    transmit power. Do not use this software as the sole basis for safety-
-    critical, access-control, or life-safety decisions.
-"""
+Amir
 
 from __future__ import annotations
 
