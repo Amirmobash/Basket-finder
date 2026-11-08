@@ -229,6 +229,12 @@ Example:
 SCAN_WINDOW_SEC = 5.0
 
 # Inside Room A when estimated distance lies between these values.
+
+
+<p align="center"><img src="docs/images/ble-basket-finder-indoor-presence-dashboard.svg" alt="BLE room-presence radar and distance estimation dashboard concept" width="960" /></p>
+
+<sub>Illustrative project schematic; not an actual CAD export, hardware photograph, or independently tested result.</sub>
+
 ROOM_A_METER_RANGE = (1.0, 5.0)
 
 CSV_LOG_PATH = "ble_events.csv"
